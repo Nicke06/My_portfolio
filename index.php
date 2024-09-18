@@ -1,0 +1,279 @@
+<?php
+    require_once("./MyConst.php");
+?>
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfolio de <?= FIRSTNAME.' '.MIDDLENAME.' '.LASTNAME ?>, développeur web & mobile junior">
+        <link rel="stylesheet" href="./css/style.css"/>
+        <link rel="shortcut icon" href="./img/pepinFavicon.png" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/e814de8a30.js" crossorigin="anonymous"></script>
+        <title>
+            Portfolio | <?= FIRSTNAME." ".MIDDLENAME." ".LASTNAME ?>
+        </title>
+        <meta name="description" content="Portfolio de <?= FIRSTNAME." ".MIDDLENAME[0].". ".LASTNAME ?>, développeur web junior">
+    </head>
+    <body>
+        <header id="header">
+            <i class="fa-solid fa-bars fa-2xl" id="menu"></i>
+            <div id="navBar">
+                <div id="logoPart">
+                    <img src="./img/pepin.jpg" alt="maPhoto" id="header-Img">
+                    <h3>
+                        <?= FIRSTNAME." ".MIDDLENAME[0].". ".LASTNAME ?>
+                    </h3>
+                    <section class="sec4">
+                        <section>
+                            <a href="https://www.facebook.com/Pepin.Goudou1" target="_blank">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </section>
+                        <section>
+                            <a href="https://twitter.com/GoudouPepin" target="_blank">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </section>
+                        <section>
+                            <a href="https://www.linkedin.com/in/pepin-nickerson-goudou/" target="_blank">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </section>
+                        <section>
+                            <a href="https://github.com/Nicke06" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </section>
+                    </section>
+                </div>
+                <div id="navBar-Item">
+                    <nav>
+                        <ul>
+                            <li><a href="#accueil">ACCUEIL</a></li>
+                            <li><a href="#apropos">A PROPOS</a></li>
+                            <li><a href="#service">NOS SERVICES</a></li>
+                            <li><a href="#experience">FORMATION</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="accueil">
+            <section id="sec1">
+                    <h5>Salut,</h5>
+                    <h3 id="presentation"></h3>
+                    <h6>Disponible pour vous développer des solutions sur mesure, alliant performance et créativité.</h6>
+                    <a href="./doc/Pépin_GOUDOU_CV.pdf" download="Pépin_GOUDOU_CV">
+                        <i class="fa-solid fa-download fa-bounce"></i>
+                        Télécharger mon CV
+                    </a>
+            </section>
+        </div>
+        <div id="apropos">
+            <section id="apropos-sec1">
+                <h3>A PROPOS</h3>
+                <p>
+                    Je suis <?= FIRSTNAME . " " . MIDDLENAME . " " . LASTNAME; ?>, développeur web et mobile.
+                    Passionné par la création d'applications modernes, performantes et intuitives. 
+                    Que ce soit pour des sites web réactifs ou des applications mobiles natives, 
+                    je m'efforce de concevoir des solutions sur mesure qui répondent à vos besoins.
+                    Explorez mes projets pour découvrir mon savoir-faire et mon engagement à offrir des produits 
+                    de qualité.
+                </p>
+                <section>
+                    <h5>
+                        Nom: GOUDOU <br/>
+                        Prénoms: Pépin Nickerson <br/>
+                        Email: pepingoudou@gmail.com
+                    </h5>
+                </section>
+                <section>
+                    <h5>
+                        Téléphone: +229 94590106 <br/>
+                        Twitter/Insta/Facebook: <br/>
+                        @pepingoudou
+                    </h5>
+                </section><br/>
+            </section>
+            <section id="apropos-sec2">
+                <img src="./img/nicke.png" alt="photo"/>
+            </section>
+        </div>
+        <div id="first">
+            <h3>MES COMPETENCES</h3>
+            <h2>Compétences techniques</h2>
+            <p>Les compétences techniques que j'ai acquis au bout de mes formations se 
+                pésentent comme suit:</p>
+            <div class="container" id="skills-container">
+                <section>
+                    <section class="progress">
+                        <section class="progress-bar" data-progress="80">80%</section>
+                    </section>
+                    <label>HTML5 / CSS3</label>
+                    <section class="progress">
+                        <section class="progress-bar" data-progress="75">75%</section>
+                    </section>
+                    <label>PHP</label>
+                    <section class="progress">
+                        <section class="progress-bar" data-progress="55">55%</section>
+                    </section>
+                    <label>Python</label>
+                    <section class="progress">
+                        <section class="progress-bar" data-progress="85">85%</section>
+                    </section>
+                    <label>SQL</label>
+                    <section class="progress">
+                        <section class="progress-bar" data-progress="65">65%</section>
+                    </section>
+                    <label>Symfony</label>
+                </section>
+                <section>
+                    <section class="progress">
+                        <section class="progress-bar" data-progress="60">60%</section>
+                    </section>
+                    <label>JavaScript</label>
+                    <section class="progress">
+                        <section class="progress-bar" data-progress="70">70%</section>
+                    </section>
+                    <label>Java</label>
+                    <section class="progress">
+                        <section class="progress-bar" data-progress="75">75%</section>
+                    </section>
+                    <label>VB.Net</label>
+                    <section class="progress">
+                        <section class="progress-bar" data-progress="70">70%</section>
+                    </section>
+                    <label>Git</label>
+                    <section class="progress">
+                        <section class="progress-bar" data-progress="65">65%</section>
+                    </section>
+                    <label>Bootstrap</label>
+                </section>
+            </div>
+        </div>
+        <div id="service">
+            <h3>SERVICES</h3>
+            <h2>Expertise</h2>
+            <p>Nos domaines d'expertise:</p>
+            <section class="container">
+                <section>
+                    <i class="fa-solid fa-mobile-screen-button fa-2xl"></i>
+                    <h4>Développement d'application mobile</h4>
+                    <p>Nous réalisons de sublime application mobile adapter à vos différents besoin pour une meilleure communication.</p>
+                </section>
+                <section>
+                <i class="fa-brands fa-windows fa-2xl"></i>
+                    <h4>Développement d'application windows</h4>
+                    <p>Nous concevons des application qui vont répondre à vos exigences et pourrons satisfaire vos attentes.</p>
+                </section>
+                <section>
+                    <i class="fa-solid fa-desktop fa-2xl"></i>
+                    <h4>Développement web</h4>
+                    <p>Les sites web que nous réalisons pourront s’adapter à tous les écrans sur lesquels ils seront affichés.</p>
+                </section>
+            </section>
+        </div>
+        <div id="experience">
+            <h3>FORMATION</h3>
+            <h2>Mes formations</h2>
+            <div class="timeline">
+                <div id="timeline-div1">
+                    <h4>Licence Professionnelle</h4>
+                    <h6>2023 - 2024</h6>
+                    <p>
+                        <b>Licence Professionnelle à l’UATM Gasa Formation : 2023 - 2024</b>
+                        <ul>
+                            <li>Obtention du diplôme de Licence Professionnelle en Génie Électrique, option Système Informatique et Logiciel</li>
+                        </ul>
+                    </p>
+                </div>
+                <div id="timeline-div2">
+                    <h4>Développement Web</h4>
+                    <h6>Octobre 2022 - Mars 2024</h6>
+                    <p>
+                        <b>Certificat de fin de Cours sur Sololearn : Octobre 2022 - Mars 2024</b>
+                        <ul>
+                            <li>JavaScript - Java - PHP - SQL - Responsive Web Design</li>
+                        </ul>
+                    </p>
+                </div>
+                <div id="timeline-div3">
+                    <h4>Graphisme</h4>
+                    <h6>Août 2021</h6>
+                    <p>
+                        <b>Graphisme au Siège du groupe Le point à Bohicon : Août 2021</b>
+                        <ul>
+                            <li>Initiation et formation en Graphisme avec le logiciel Adobe Photoshop</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="second">
+            <h2>Souhaitez-vous travailler avec moi ?</h2>
+            <p>Faites moi confiance pour tout vos services, et vous serez satisfait avec un travail professionnel. <br/>
+            Disponible pour vous servir 24h/24h</p>
+        </div>
+        <div id="contact">
+            <h3>CONTACT</h3>
+            <h2>Nous contacter</h2>
+            <p>Nous sommes joignables tous les jours 24h/24h au:</p>
+            <section class="container">
+                <section>
+                    <i class="fa-solid fa-phone fa-2xl"></i>
+                    <h4>Téléphone</h4>
+                    <a href="tel:+22994590106">+229 94590106</a><br/>
+                    <a href="tel:+22991532634">+229 91532634</a>
+                </section>
+                <section>
+                    <i class="fa-solid fa-location-dot fa-2xl"></i>
+                    <h4>Localisation</h4>
+                    Calavi-Kpota, non loin de l'église catholique Sainte Joséphine Bakhita
+                </section>
+                <section>
+                    <i class="fa-solid fa-envelope fa-2xl"></i>
+                    <h4>Email</h4>
+                    pepingoudou@gmail.com
+                </section>
+            </section>
+            <section>
+                <a href="mailto:pepingoudou@gmail.com">Envoyer un message par mail</a>
+            </section>
+        </div>
+        <footer>
+            <div id="last">
+                <section id="home">
+                    <a href="#header">^</a>
+                </section>
+                <section class="sec4">
+                    <section>
+                        <a href="https://www.facebook.com/Pepin.Goudou1" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </section>
+                    <section>
+                        <a href="https://twitter.com/GoudouPepin" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </section>
+                    <section>
+                        <a href="https://www.linkedin.com/in/pepin-nickerson-goudou/" target="_blank">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </section>
+                    <section>
+                        <a href="https://github.com/Nicke06" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </section>
+                </section>
+                <h6>Copyright &copy; <?= date("Y");?> By <span>Pépin Nickerson GOUDOU</span></h6>
+            </div>
+        </footer>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

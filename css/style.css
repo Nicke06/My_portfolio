@@ -1,0 +1,1227 @@
+*{
+    margin: 0 auto;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    background-color: #cfe5fd;
+}
+
+header #menu{
+   display: none;
+   position: relative;
+   z-index: 2;
+}
+
+#navBar{
+    background-color: #cfe5fd;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#navBar div{
+    display: inline-block;
+}
+
+#navBar #logoPart{
+    width: 35%;
+    color: #8b0101;
+    text-align: justify;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+#navBar #logoPart #header-Img{
+    display: none;
+    width: 50%;
+    border-radius: 50%;
+    border: 2px solid #8b0101;
+    margin-bottom: 5%;
+}
+
+#navBar #logoPart .sec4{
+    text-align: center;
+    display: none;
+}
+
+#navBar-Item nav ul{
+    list-style: none;
+}
+
+#navBar-Item nav ul li{
+    display: inline-block;
+    margin: 20px;
+}
+
+#navBar-Item nav ul li a{
+    text-decoration: none;
+    color: #000;
+    padding: 5px;
+    transition: all 0.8s ease;
+}
+
+#navBar-Item nav ul li a:hover, #accueil #sec1 a:hover,#btn:hover{
+    color: #ff0000;
+    background-color: transparent;
+    border-radius: 15px;
+    transition: all 0.8s ease;
+}
+
+#accueil{
+    padding: 80px;
+    margin: 0 auto;
+    background-size: contain;
+    background-image: url(../img/test2.png);
+    background-position: center;
+    height: 100vh;
+    /*animation: fondu 20s ease-in-out infinite both;*/
+}
+
+/*@keyframes fondu{
+    0%{background-image:url(../img/arriereplan1.jpg);}
+    25%{background-image:url(../img/arriereplan2.jpg);}
+    50%{background-image:url(../img/arriereplan3.jpg);}
+    75%{background-image:url(../img/arriereplan4.jpg);}
+    100%{background-image:url(../img/arriereplan1.jpg);}
+}*/
+
+#accueil section{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0px;
+    color: #fff;
+    
+}
+
+#accueil #sec1{
+    margin-top: 20%;
+}
+
+#accueil #sec1 h5, #accueil #sec1 h6{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#accueil #sec1 h3{
+    margin: 20px 0px;
+    line-height: 35px;
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+}
+
+/*cursor*/
+
+#accueil #sec1 h3::after{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 2px;
+    background-color: #dadada;
+    right: -3px;
+    top: 0;
+    animation: cursor 1s infinite;
+}
+
+@keyframes cursor{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#accueil span{
+    color: #ff0;
+}
+
+#accueil #sec1 h6{
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+#accueil #sec1 a{
+    color: #fff;
+    background-color: #383838;
+    border: none;
+    border-radius: 15px;
+    padding: 13px;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+
+#apropos{
+    display: flex;
+    padding: 20px 0px 0px;
+    margin: 0 auto;
+    background-color: #ecf2f9;
+}
+
+#apropos-sec1{
+    margin-top: 30px;
+    padding: 0% 0% 0% 6%;
+    width: 70%;
+    text-align: justify;
+    line-height: 30px;
+}
+
+#apropos-sec1 h3{
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+#apropos-sec1 section{
+    display: inline-block;
+    margin: 40px 60px 0px 0px;
+}
+
+#apropos-sec1, #apropos-sec2, .timeline div{
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+#apropos-sec2{
+    width: 30%;
+}
+
+#apropos-sec2 img{
+    width: 100%;
+}
+
+.btn{
+    background-color: rgb(47, 47, 47);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 25px;
+    font-size: 16px;
+    transition: all 1.5s ease;
+}
+
+#first, #service, #contact, #second, #experience, #three, #four{
+    text-align:center;
+    padding: 50px;
+    line-height: 2;
+}
+
+#first h3, #service h3, #contact h3, #experience h3, #three h3{
+    font-weight:300;
+}
+
+.container{
+    display: flex;
+    margin: 30px 0px;
+}
+
+#service .container p{
+    text-align: justify;
+    width: 85%;
+}
+
+.progress{
+    border: 2px solid #383838;
+    width: 500px;
+    height: 28px;
+    margin: 20px 0px 10px 0px;
+    border-radius: 12px;
+    background-color: #e9ebec;
+    overflow: hidden;
+}
+
+.progress-bar{
+    background-color: #00a7e4;
+    color: #fff;
+    height: 28px;
+    margin: 0px;
+    border-radius: 12px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    width: 0;
+    opacity: 0;
+    transition: all 3s;
+}
+
+input{
+    width: 28%;
+    height: 30px;
+}
+
+input, textarea{
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    padding: 5px;
+    margin: 20px;
+}
+
+#send{
+    width: 20%;
+    height: 40px;
+    background-color: rgb(47, 47, 47);
+    color: #fff;
+    transition: all 1.5s ease;
+}
+
+#send:hover, footer #home:hover, .btn:hover{
+    background-color: #000;
+    transition: all 1.5s ease;
+}
+
+#service, #second, #four{
+    background-color: #ecf2f9;
+}
+
+#three{
+    padding: 0px;
+}
+
+#sec3 section{
+    display: inline-block;
+    margin: 30px 50px;
+}
+/*Propriété sur icone dans la section contact*/
+#contact a{
+    text-decoration: none;
+    color: #0000ff;
+    transition: all 0.8s ease;
+}
+
+#contact a:hover{
+    text-decoration: underline;
+    transition: all 0.8s ease;
+}
+
+/*Message de soumission du formulaire*/
+#alertSuccess, #alertDanger{
+    border: 2px solid #018b01;
+    background-color: rgb(157, 255, 163);
+    width: 50%;
+    margin: 1% 25%;
+    padding: 5px;
+    border-radius: 25px;
+    text-align: center;
+}
+#alertDanger{
+    border: 2px solid #8b0101;
+    background-color: rgb(255, 157, 157);
+}
+#alertSuccess h4{
+    color: #018b01;
+}
+#alertDanger h4{
+    color: #8b0101;
+}
+
+/*Bouton retour en haut*/
+footer #home{
+    background-color: #383838;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    bottom: 30px;
+    right: 20px;
+    position: fixed;
+    text-align: center;
+    display: none;
+    transition: all 1.5s ease;
+}
+
+footer #home a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 45px;
+}
+
+footer #last{
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px 0px 20px 0px;
+    background-color: #ecf2f9;
+}
+
+#last h6 span{
+    color: #433df9;
+}
+
+/*Style sur les icônes du header en version mobile et du footer*/
+
+.sec4 section{
+    display: inline-block;
+    margin: 10px;
+}
+
+.sec4 section a{
+    text-decoration: none;
+    transition: all 1s ease;
+}
+
+.sec4 section a:hover{
+    opacity: 20%;
+    transition: all 1s ease;
+}
+
+.sec4 section a i{
+    color: #0000ff;
+}
+
+/* Timeline */
+
+#experience .timeline{
+    border-left: 2px solid #383838;
+    width: 50%;
+    padding: 0 20px 0 30px;
+    margin-top: 2%;
+    text-align: justify;
+}
+
+.timeline div{
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 10px 25px;
+    line-height: 1.7;
+    position: relative;
+    height: 130px;
+    margin-bottom: 20px;
+}
+
+.timeline div::before{
+    content: " ";
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: 3px solid #383838;
+    position: absolute;
+    top: 10px;
+    left: -42px;
+}
+
+.timeline div::after{
+    content: " ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent #fff transparent transparent;
+    border-width: 8px;
+    position: absolute;
+    left: -16px;
+    top: 12px;
+}
+
+.timeline div p{
+    font-size: 15.5px;
+}
+
+.timeline div ul{
+    margin-left: 30px;
+    font-size: 15.5px;
+}
+
+/*Responsive*/
+
+@media screen and (max-width:480px){
+    header{
+        padding: 2% 0%;
+        position: fixed;
+        background-color: #cfe5fd;
+        width: 100%;
+        z-index: 2;
+    }
+    header #menu{
+        display: inline-block;
+        cursor: pointer;
+        margin: 0% 0.5%;
+    }
+    #navBar{
+        width: 210px;
+        height: 480px;
+        top: 0%;
+        margin: 0;
+        padding-top: 5%;
+        position: absolute;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    }
+    #navBar #logoPart{
+        width: 100%;
+    }
+    #navBar #logoPart #header-Img{
+        display: block;
+    }
+    #navBar #logoPart h3{
+        font-size: 0.8em;
+        text-align: center;
+    }
+    #navBar #logoPart .sec4{
+        display: block;
+    }
+    nav ul{
+        margin: 3px;
+    }
+    nav ul li{
+        padding: 0;
+        margin: 5px 0;
+        display: block;
+    }
+    nav ul li a{
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
+    #accueil{
+        padding: 2rem;
+    }
+    
+    #accueil #sec1 h5, #accueil #sec1 h6{
+        font-weight: 100;
+        font-size: 16px;
+    }
+    
+    #accueil #sec1 h3{
+        margin: 10px 0px;
+        line-height: 25px;
+        font-size: 18px;
+    }
+    
+    #accueil #sec1 h3::after{
+        display: none;
+    }
+    
+    #accueil #sec1 h6{
+        line-height: 25px;
+    }
+    
+    #accueil #sec1 a{
+        padding: 10px;
+    }
+
+    #apropos{
+        display: block;
+        text-align: center;
+    }
+    
+    #apropos-sec1{
+        padding: 0%;
+        margin-top: 30px;
+        width: 80%;
+        line-height: 25px;
+        font-size: 16px;
+    }
+    
+    #apropos-sec1 h3{
+        margin-bottom: 15px;
+        font-weight: 200;
+        font-size: 25px;
+    }
+    
+    #apropos-sec1 section{
+        margin: 10px 0px 0px;
+    }
+    
+    #apropos-sec2{
+        width: 50%
+    }
+    
+    .btn{
+        padding: 8px;
+        margin: 20px 0px;
+        font-size: 14px;
+    }
+    
+    #first, #service, #contact, #second, #experience, #four{
+        padding: 30px;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+    
+    #first h3, #service h3, #contact h3, #experience h3{
+        font-weight:100;
+        font-size: 18px;
+    }
+    
+    #first h2, #service h2, #contact h2, #experience h2, #second h2{
+        font-size: 20px;
+    }
+    
+    #first p, .container{
+        font-size: 16px;
+    }
+    
+    .container{
+        display: inline-block;
+        margin: 15px 0px 0px;
+    }
+    
+    .progress{
+        width: 250px;
+        height: 18px;
+    }
+
+    .progress-bar{
+        height: 18px;
+        font-size: 0.85rem;
+    }
+    
+    input{
+        width: 90%;
+        height: 25px;
+        display: inline-block;
+    }
+    
+    input, textarea{
+        font-size: 16px;
+        margin: 8px;
+    }
+    
+    textarea{
+        width: 90%;
+        height: 60px;
+    }
+    
+    #send{
+        width: 50%;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    #sec3 section{
+        margin: 20px 50px;
+    }
+    /*Propriété sur icone dans la section contact*/
+    #contact .container section img{
+        height: 20px;
+    }
+
+    #contact .container section:nth-child(2) img{
+        margin-top: 10px;
+    }
+    
+    #contact .container section:nth-child(3) img{
+        height: 30px;
+    }
+    /*Bouton retour en haut*/
+    footer #home{
+        width: 30px;
+        height: 30px;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    footer #home a{
+        font-size: 35px;
+    }
+    
+    footer #last{
+        padding: 20px 0px 10px 0px;
+    }
+    
+    #last h6{
+        font-size: 0.6rem;
+    }
+    
+    .sec4 section{
+        margin: 3px;
+    }
+    
+    /* Timeline */
+
+    #experience .timeline{
+        width: 90%;
+        padding: 0 20px 0 20px;
+    }
+
+    .timeline div{
+        padding: 5px 15px;
+        line-height: 1.5;
+        height: 130px;
+    }
+
+    .timeline div::before{
+        width: 10px;
+        height: 10px;
+        left: -29px;
+    }
+
+    .timeline div::after{
+        top: 9px;
+    }
+
+    .timeline div p, .timeline div ul{
+        font-size: 12px;
+    }
+
+    .timeline div ul{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:570px){
+    header{
+        padding: 2% 0%;
+        background-color: #cfe5fd;
+        z-index: 2;
+        position: fixed;
+        width: 100%;
+    }
+    header #menu{
+        display: inline-block;
+        cursor: pointer;
+        margin: 0% 0.5%;
+    }
+    #navBar{
+        width: 210px;
+        height: 480px;
+        top: 0%;
+        padding-top: 5%;
+        position: absolute;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    }
+    #navBar #logoPart{
+        width: 100%;
+    }
+    #navBar #logoPart #header-Img{
+        display: block;
+    }
+    #navBar #logoPart h3{
+        font-size: 0.8em;
+        text-align: center;
+    }
+    #navBar #logoPart .sec4{
+        display: block;
+    }
+    nav ul{
+        margin: 3px;
+    }
+    nav ul li{
+        padding: 0;
+        margin: 5px 0;
+        display: block;
+    }
+    nav ul li a{
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
+    #accueil{
+        padding: 2rem;
+    }
+    
+    #accueil #sec1 h5, #accueil #sec1 h6{
+        font-weight: 100;
+        font-size: 16px;
+    }
+    
+    #accueil #sec1 h3{
+        margin: 10px 0px;
+        line-height: 25px;
+        font-size: 18px;
+    }
+    
+    #accueil #sec1 h3::after{
+        display: none;
+    }
+    
+    #accueil #sec1 h6{
+        line-height: 25px;
+    }
+    
+    #accueil #sec1 a{
+        padding: 10px;
+    }
+
+    #apropos{
+        display: block;
+        text-align: center;
+    }
+    
+    #apropos-sec1{
+        margin-top: 30px;
+        padding: 0%;
+        width: 80%;
+        text-align: justify;
+        line-height: 25px;
+        font-size: 16px;
+    }
+    
+    #apropos-sec1 h3{
+        margin-bottom: 15px;
+        font-weight: 200;
+        font-size: 25px;
+    }
+    
+    #apropos-sec1 section{
+        margin: 10px 20px 0px 0px;
+    }
+    
+    #apropos-sec2{
+        width: 50%
+    }
+    
+    .btn{
+        padding: 8px;
+        margin: 20px 0px;
+        font-size: 14px;
+    }
+    
+    #first, #service, #contact, #second, #experience, #four{
+        padding: 30px;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+    
+    #first h3, #service h3, #contact h3, #experience h3{
+        font-weight:100;
+        font-size: 18px;
+    }
+    
+    #first h2, #service h2, #contact h2, #experience h2, #second h2{
+        font-size: 20px;
+    }
+    
+    #first p, .container{
+        font-size: 16px;
+    }
+    
+    .container{
+        display: inline-block;
+        margin: 15px 0px 0px;
+    }
+    
+    .progress{
+        width: 250px;
+        height: 18px;
+    }
+    
+    .progress-bar{
+        height: 18px;
+        font-size: 0.85rem;
+    }
+    
+    input{
+        width: 90%;
+        height: 25px;
+        display: inline-block;
+    }
+    
+    input, textarea{
+        font-size: 16px;
+        margin: 8px;
+    }
+    
+    textarea{
+        width: 90%;
+        height: 60px;
+    }
+    
+    #send{
+        width: 35%;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    #sec3 section{
+        margin: 20px 50px;
+    }
+    /*Propriété sur icone dans la section contact*/
+    #contact .container section img{
+        height: 20px;
+    }
+
+    #contact .container section:nth-child(2) img{
+        margin-top: 10px;
+    }
+    
+    #contact .container section:nth-child(3) img{
+        height: 30px;
+    }
+    /*Bouton retour en haut*/
+    footer #home{
+        width: 30px;
+        height: 30px;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    footer #home a{
+        font-size: 35px;
+    }
+    
+    footer #last{
+        padding: 20px 0px 10px 0px;
+    }
+    
+    .sec4 section{
+        margin: 3px;
+    }
+    
+    /* Timeline */
+
+    #experience .timeline{
+        width: 90%;
+        padding: 0 10px 0 20px;
+    }
+
+    .timeline div{
+        padding: 5px 15px;
+        line-height: 1.6;
+        height: 140px;
+    }
+
+    .timeline div::before{
+        width: 10px;
+        height: 10px;
+        left: -29px;
+    }
+
+    .timeline div::after{
+        top: 9px;
+    }
+
+    .timeline div p, .timeline div ul{
+        font-size: 14px;
+    }
+
+    .timeline div ul{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width:571px) and (max-width:789px){
+    header{
+        padding: 2% 0%;
+        width: 100%;
+        background-color: #cfe5fd;
+        position: fixed;
+        z-index: 2;
+    }
+    header #menu{
+        display: inline-block;
+        cursor: pointer;
+        margin: 0% 0.5%;
+    }
+    #navBar{
+        width: 210px;
+        height: 480px;
+        top: 0%;
+        padding-top: 5%;
+        position: absolute;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    }
+    #navBar #logoPart{
+        width: 100%;
+    }
+    #navBar #logoPart #header-Img{
+        display: block;
+    }
+    #navBar #logoPart h3{
+        font-size: 0.8em;
+        text-align: center;
+    }
+    #navBar #logoPart .sec4{
+        display: block;
+    }
+    nav ul{
+        margin: 3px;
+    }
+    nav ul li{
+        padding: 0;
+        margin: 5px 0;
+        display: block;
+    }
+    nav ul li a{
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
+    #accueil{
+        padding: 2rem;
+    }
+    
+    #accueil #sec1 h5, #accueil #sec1 h6{
+        font-weight: 100;
+        font-size: 16px;
+    }
+    
+    #accueil #sec1 h3{
+        margin: 10px 0px;
+        line-height: 25px;
+        font-size: 18px;
+    }
+    
+    #accueil #sec1 h3::after{
+        display: none;
+    }
+    
+    #accueil #sec1 h6{
+        line-height: 25px;
+    }
+    
+    #accueil #sec1 a{
+        padding: 10px;
+    }
+
+    #apropos{
+        display: block;
+        text-align: center;
+    }
+    
+    #apropos-sec1{
+        margin-top: 30px;
+        padding: 0%;
+        width: 80%;
+        line-height: 25px;
+        font-size: 16px;
+    }
+    
+    #apropos-sec1 h3{
+        margin-bottom: 15px;
+        font-weight: 200;
+        font-size: 25px;
+    }
+    
+    #apropos-sec1 section{
+        margin: 10px 0px 0px;
+    }
+    
+    #apropos-sec2{
+        width: 50%
+    }
+    
+    .btn{
+        padding: 8px;
+        margin: 20px 0px;
+        font-size: 14px;
+    }
+    
+    #first, #service, #contact, #second, #experience, #four{
+        padding: 30px;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+    
+    #first h3, #service h3, #contact h3, #experience h3{
+        font-weight:100;
+        font-size: 18px;
+    }
+    
+    #first h2, #service h2, #contact h2, #experience h2, #second h2{
+        font-size: 20px;
+    }
+    
+    #first p, .container{
+        font-size: 16px;
+    }
+    
+    .container{
+        display: flex;
+        margin: 15px 0px 0px;
+    }
+    
+    .progress{
+        width: 250px;
+        height: 18px;
+    }
+    
+    .progress-bar{
+        height: 18px;
+        font-size: 0.85rem;
+    }
+    
+    input{
+        width: 90%;
+        height: 25px;
+        display: inline-block;
+    }
+    
+    input, textarea{
+        font-size: 16px;
+        margin: 8px;
+    }
+    
+    textarea{
+        width: 90%;
+        height: 60px;
+    }
+    
+    #send{
+        width: 25%;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    #sec3 section{
+        margin: 20px 30px;
+    }
+    /*Propriété sur icone dans la section contact*/
+    #contact .container section img{
+        height: 20px;
+    }
+    
+    #contact .container section:nth-child(1){
+        padding-top: 10px;
+    }
+    
+    #contact .container section:nth-child(2){
+        width: 30%;
+    }
+
+    #contact .container section:nth-child(2) img{
+        margin-top: 10px;
+    }
+    
+    #contact .container section:nth-child(3) img{
+        height: 30px;
+    }
+    /*Bouton retour en haut*/
+    footer #home{
+        width: 30px;
+        height: 30px;
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    footer #home a{
+        font-size: 35px;
+    }
+    
+    footer #last{
+        padding: 20px 0px 10px 0px;
+    }
+    
+    .sec4 section{
+        margin: 3px;
+    }
+    
+    /* Timeline */
+
+    #experience .timeline{
+        width: 90%;
+        padding: 0 10px 0 20px;
+    }
+
+    .timeline div{
+        padding: 5px 15px;
+        height: 140px;
+    }
+
+    .timeline div::before{
+        width: 10px;
+        height: 10px;
+        left: -29px;
+    }
+
+    .timeline div::after{
+        top: 9px;
+    }
+
+    .timeline div p, .timeline div ul{
+        font-size: 14px;
+    }
+
+    .timeline div ul{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width:790px) and (max-width:1169px){
+    #navBar{
+        font-size: 0.7em;
+    }
+    #navBar #logoPart{
+        width: 20%;
+    }
+    #navBar #logoPart h3{
+        font-size: 0.8em;
+    }
+    .btn{
+        margin: 20px 0px;
+    }
+    
+    #first, #service, #contact, #second, #experience, #four{
+        padding: 30px;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+    
+    .container{
+        display: flex;
+        margin: 15px 0px 0px;
+        font-size: 16px;
+    }
+    
+    .progress{
+        width: 335px;
+        height: 25px;
+    }
+    .progress-bar{
+        height: 25px;
+    }
+    
+    input{
+        width: 90%;
+        height: 25px;
+        display: inline-block;
+    }
+    
+    input, textarea{
+        font-size: 16px;
+        margin: 8px;
+    }
+    
+    textarea{
+        width: 90%;
+        height: 60px;
+    }
+    
+    #send{
+        height: 30px;
+        font-size: 14px;
+    }
+    /* Timeline */
+
+    #experience .timeline{
+        width: 90%;
+        padding: 0 10px 0 20px;
+    }
+
+    .timeline div{
+        padding: 5px 15px;
+        height: 140px;
+    }
+
+    .timeline div::before{
+        width: 10px;
+        height: 10px;
+        left: -29px;
+    }
+
+    .timeline div::after{
+        top: 9px;
+    }
+}
