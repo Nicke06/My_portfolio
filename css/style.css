@@ -80,7 +80,7 @@ header #menu{
 #accueil{
     padding: 80px;
     margin: 0 auto;
-    background-size: contain;
+    background-size: cover;
     background-image: url(../img/test2.png);
     background-position: center;
     height: 100vh;
