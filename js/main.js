@@ -49,7 +49,7 @@ function scrollFuntion(){
 window.onload=setTimeout(function(){afficherPresentation()},2000);
 
 var presentation=document.getElementById("presentation");
-var texte="Je suis <span>Pépin Nickerson GOUDOU</span>, développeur web & mobile.";
+var texte="Je suis Pépin Nickerson GOUDOU, développeur web & mobile.";
 var index=0;
 var i=0;
 var dir="aGauche";
