@@ -11,6 +11,7 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
     background-color: #cfe5fd;
+    overflow-x: hidden;
 }
 
 header #menu{
@@ -67,6 +68,7 @@ header #menu{
     text-decoration: none;
     color: #000;
     padding: 5px;
+    font-weight: 500;
     transition: all 0.8s ease;
 }
 
@@ -77,6 +79,10 @@ header #menu{
     transition: all 0.8s ease;
 }
 
+#navBar-Item nav ul li a.active{
+    color: #ff0000;
+}
+
 #accueil{
     padding: 80px;
     margin: 0 auto;
@@ -84,16 +90,7 @@ header #menu{
     background-image: url(../img/test2.png);
     background-position: center;
     height: 100vh;
-    /*animation: fondu 20s ease-in-out infinite both;*/
 }
-
-/*@keyframes fondu{
-    0%{background-image:url(../img/arriereplan1.jpg);}
-    25%{background-image:url(../img/arriereplan2.jpg);}
-    50%{background-image:url(../img/arriereplan3.jpg);}
-    75%{background-image:url(../img/arriereplan4.jpg);}
-    100%{background-image:url(../img/arriereplan1.jpg);}
-}*/
 
 #accueil section{
     display: inline-block;
@@ -194,7 +191,7 @@ header #menu{
 #apropos-sec1, #apropos-sec2, .timeline div{
     transform: translateY(100%);
     opacity: 0;
-    transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
 }
 
 #apropos-sec2{
@@ -335,8 +332,7 @@ input, textarea{
 /*Bouton retour en haut*/
 footer #home{
     background-color: #383838;
-    width: 40px;
-    height: 40px;
+    padding: 10px 12px;
     border-radius: 50%;
     bottom: 30px;
     right: 20px;
@@ -349,7 +345,6 @@ footer #home{
 footer #home a{
     color: #fff;
     text-decoration: none;
-    font-size: 45px;
 }
 
 footer #last{
@@ -479,6 +474,7 @@ footer #last{
     }
     nav ul{
         margin: 3px;
+        text-align: justify;
     }
     nav ul li{
         padding: 0;
@@ -492,6 +488,7 @@ footer #last{
     }
     #accueil{
         padding: 2rem;
+        height: auto;
     }
     
     #accueil #sec1 h5, #accueil #sec1 h6{
@@ -623,14 +620,8 @@ footer #last{
     }
     /*Bouton retour en haut*/
     footer #home{
-        width: 30px;
-        height: 30px;
         bottom: 10px;
         right: 10px;
-    }
-    
-    footer #home a{
-        font-size: 35px;
     }
     
     footer #last{
@@ -655,7 +646,7 @@ footer #last{
     .timeline div{
         padding: 5px 15px;
         line-height: 1.5;
-        height: 130px;
+        height: 160px;
     }
 
     .timeline div::before{
@@ -715,6 +706,7 @@ footer #last{
     }
     nav ul{
         margin: 3px;
+        text-align: justify;
     }
     nav ul li{
         padding: 0;
@@ -728,6 +720,8 @@ footer #last{
     }
     #accueil{
         padding: 2rem;
+        background-repeat: no-repeat;
+        height: auto;
     }
     
     #accueil #sec1 h5, #accueil #sec1 h6{
@@ -860,14 +854,8 @@ footer #last{
     }
     /*Bouton retour en haut*/
     footer #home{
-        width: 30px;
-        height: 30px;
         bottom: 10px;
         right: 10px;
-    }
-    
-    footer #home a{
-        font-size: 35px;
     }
     
     footer #last{
@@ -948,6 +936,7 @@ footer #last{
     }
     nav ul{
         margin: 3px;
+        text-align: justify;
     }
     nav ul li{
         padding: 0;
@@ -1100,14 +1089,8 @@ footer #last{
     }
     /*Bouton retour en haut*/
     footer #home{
-        width: 30px;
-        height: 30px;
         bottom: 10px;
         right: 10px;
-    }
-    
-    footer #home a{
-        font-size: 35px;
     }
     
     footer #last{

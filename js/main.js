@@ -1,34 +1,149 @@
 /************Effet de chargement************/
 
+
+/************Niveau de navigation dans la navbar************/
+let observer = null;
+let sectionContainer = document.querySelectorAll('div[data-section]');
+let aproposSec1 = document.getElementById("apropos-sec1");
+let aproposSec2 = document.getElementById("apropos-sec2");
+let skillsContainer = document.getElementById("skills-container");
+let progressBars = document.querySelectorAll(".progress-bar");
+let timelineItem = document.querySelectorAll(".timeline-item");
+let presentation=document.getElementById("presentation");
+let texte="Je suis Pépin Nickerson GOUDOU, développeur web & mobile.";
+let index=0;
+let i=0;
+let dir="aGauche";
+let nav=document.getElementById("navBar");
+let homeBtn=document.getElementById("home");
+let menuIcon = document.querySelector("#menu");
+let menuIconStatut = menuIcon.className;
+
+/**
+ * Fonction permettant de gérer l'animation des barres de progessions de skills
+ */
+function showProgress(){
+    progressBars.forEach(progressBar => {
+        let valueProgress = progressBar.dataset.progress;
+        progressBar.style.opacity = 1;
+        progressBar.style.width = `${valueProgress}%`;
+    });
+}
+
+/**
+ * Fonction permettant de gérer l'effet de translation des éléments
+ * @param {HTMLElement} element 
+ * @param {string} translateType 
+ * @param {number} value 
+ */
+const startTransform = function(element, translateType, value) {
+    element.style.transform = `translate${translateType}(${value}%)`;
+    element.style.opacity = 1;
+}
+
+/**
+ * Fonction permettant de déclencher l'apparation par effet de translate des éléments
+ * @param {HTMLElement} element 
+ */
+const SlideIn = function(element) {
+    if(element?.getAttribute('id') == 'apropos')
+    {
+        startTransform(aproposSec1, 'Y', 0);
+        startTransform(aproposSec2, 'Y', 0);
+    }
+    if(element?.classList.contains('timeline-item'))
+    {
+        startTransform(element, 'Y', 0);
+    }
+}
+
+/**
+ * Fonction permettant d'ajouter ou de supprimer la classe active aux nav items
+ * @param {HTMLElement} element 
+ */
+const activate = function(element) {
+    let linkAssociate = document.querySelector(`a[href="#${element.getAttribute('id')}"]`);
+    if(element == skillsContainer)
+    {
+        showProgress();
+    }
+    SlideIn(element);
+    if(linkAssociate == null)
+    {
+        return null;
+    }
+    linkAssociate.parentElement.parentElement.querySelectorAll('.active').forEach(
+        (node) => {
+            node.classList.remove('active');
+        }
+    );
+    linkAssociate.classList.add('active');
+}
+
+/**
+ * Fonction callback de l'intersectionObserver
+ * @param {IntersectionObserverEntry[]} entries 
+ * @param {IntersectionObserver} observer 
+ */
+const callback = function(entries, observer) {
+    entries.forEach(
+        (entry) => {
+            if(entry.isIntersecting)
+            {
+                activate(entry.target);
+            }
+        }
+    );
+}
+
+/**
+ * Fonction pour associer ou supprimer un observateur sur les éléments HTML
+ * @param {HTMLElement[]} elements 
+ * @param {number} ratio 
+ */
+const observe = function(elements, ratio = .6) {
+    if(observer != null)
+    {
+        elements.forEach(
+            (element) => {
+                observer.unobserve(element);
+            }
+        );
+    }
+    let y = window.innerHeight * ratio;
+    observer = new IntersectionObserver(callback, {
+        rootMargin: `-${window.innerHeight - y - 1}px 0px -${y}px 0px`
+    });
+    
+    elements.forEach(
+        (element) => {
+            observer.observe(element);
+        }
+    );
+}
+
+/**
+ * Espionner les différentes sections
+ */
+if(sectionContainer.length != 0)
+{
+    observe(sectionContainer);
+    if(window.innerWidth <= 570)
+    {
+        observe(sectionContainer, 0.2);
+    }
+}
+
+/**
+ * Espionner l'apparition des éléments du timeline
+ */
+if(timelineItem.length != 0)
+{
+    observe(timelineItem, .2);
+}
 /************Afficher/Masquer le bouton retour en haut de page et bar de navigation************/
 window.onscroll=function(){scrollFuntion()};
 
-var nav=document.getElementById("navBar");
-var homeBtn=document.getElementById("home");
-var screenWidth = window.screen.width;
-
-function cacherNavBar(){
-    nav.style.top="-100px";
-    nav.style.transition="top 2s";
-}
-
-var aproposSec1 = document.getElementById("apropos-sec1");
-var aproposSec2 = document.getElementById("apropos-sec2");
-var timelineDiv1 = document.getElementById("timeline-div1")
-var timelineDiv2 = document.getElementById("timeline-div2")
-var timelineDiv3 = document.getElementById("timeline-div3")
-
-//Fonction pour gérer l'apparition des éléments
-function SlideIn(objet, coef){
-    const {scrollTop, clientHeight} = document.documentElement;
-
-    const DistanceToTop = objet.getBoundingClientRect().top;
-    
-    if(scrollTop > (scrollTop + DistanceToTop).toFixed() - (clientHeight * coef)){
-        objet.style.transform = "translateY(0%)";
-        objet.style.opacity = 1;
-    }
-}
 
 function scrollFuntion(){
     if((document.body.scrollTop>400 || document.documentElement.scrollTop>400)){
@@ -37,22 +152,10 @@ function scrollFuntion(){
     else{
         homeBtn.style.display="none";
     }
-    //Afficher la photo de la partie à propos
-    SlideIn(aproposSec1, 1.5);
-    SlideIn(aproposSec2, 1.5);
-    SlideIn(timelineDiv1, 0.80);
-    SlideIn(timelineDiv2, 0.80);
-    SlideIn(timelineDiv3, 0.80);
 }
 
 
 window.onload=setTimeout(function(){afficherPresentation()},2000);
-
-var presentation=document.getElementById("presentation");
-var texte="Je suis Pépin Nickerson GOUDOU, développeur web & mobile.";
-var index=0;
-var i=0;
-var dir="aGauche";
 
 function afficherPresentation(){
     setTimeout(afficherPresentation,150);
@@ -71,29 +174,8 @@ function afficherPresentation(){
     }
 }
 
-/************Effet de chargement bar de progression************/
-var skillsContainer = document.getElementById("skills-container");
-var progressBars = document.querySelectorAll(".progress-bar");
-
-function showProgress(){
-    progressBars.forEach(progressBar => {
-        var valueProgress = progressBar.dataset.progress;
-        progressBar.style.opacity = 1;
-        progressBar.style.width = `${valueProgress}%`;
-    });
-}
-
-window.addEventListener("scroll", function(){
-    var sectionPos = skillsContainer.getBoundingClientRect().top;
-    var screenPos = window.innerHeight / 2;
-    if(sectionPos < screenPos){
-        showProgress();
-    }
-});
 
 /*************SUR MOBILE*************/
-var menuIcon = document.querySelector("#menu");
-var menuIconStatut = menuIcon.className
 
 function hideShowMenu(){
     if(menuIcon.className == menuIconStatut){
@@ -115,8 +197,8 @@ menuIcon.addEventListener("click",function(){
 /******CACHER LA NAV BARRE AU CLIC SUR L'ECRAN*******/
 
 window.onclick=function(){
-    var menuIconDisplayStatut = getComputedStyle(menuIcon).display
-    var navBarStatut = getComputedStyle(nav).opacity
+    let menuIconDisplayStatut = getComputedStyle(menuIcon).display
+    let navBarStatut = getComputedStyle(nav).opacity
     if(menuIconDisplayStatut === "inline-block"){
         if(navBarStatut === "1"){
             menuIcon.className = "fa-solid fa-bars fa-2xl"
